@@ -40,7 +40,7 @@ public class Movimentacao : MonoBehaviour
 
         if (movimento != Vector3.zero)
         {
-            // Fazendo a rotacao do personagem de forma suavizada
+            // Fazendo a rotacao do personagem de forma suave
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movimento), Time.deltaTime * 10);
         }        
     }
