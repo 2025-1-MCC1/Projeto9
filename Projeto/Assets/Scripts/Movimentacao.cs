@@ -11,7 +11,11 @@ public class Movimentacao : MonoBehaviour
     // Variavel para velocidade do objeto
     private float speed;
 
+    // Variavel do animator do personagem
     private Animator anim;
+
+    // Variavel que controla se o jogador esta agachado ou nao
+    private bool estaAgachado;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +36,7 @@ public class Movimentacao : MonoBehaviour
 
         // Criando uma variavel vector 3 de movimento, anexando o vector 3 dos eixos em x e z
         Vector3 movimento = new Vector3(horizontal, 0, vertical);
+
         // Fazer com que o vetor transforme as direcoes do personagem de acordo com a camera do jogo
         movimento = playerCamera.TransformDirection(movimento);
         movimento.y = 0;
@@ -46,7 +51,42 @@ public class Movimentacao : MonoBehaviour
             // Fazendo a rotacao do personagem de forma suavizada
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movimento), Time.deltaTime * 10);
         }
-
+        
+        // Ativando a animacao de andar do personagem
         anim.SetBool("estaAndando", movimento != Vector3.zero);
+
+        // Invocando o metodo "Agachar"
+        Agachar();
+
+        // Verificando as animacoes
+        if (movimento != Vector3.zero && estaAgachado)
+        {
+            anim.SetBool("estaAndandoAgachado", true);
+            anim.SetBool("estaAndando", false);
+            anim.SetBool("estaAgachado", false);
+        }
+        else if (movimento == Vector3.zero && estaAgachado)
+        {
+            anim.SetBool("estaAndandoAgachado", false);
+            anim.SetBool("estaAgachado", true);
+        }
+    }
+
+    void Agachar()
+    {
+        // Se o jogador apertar a tecla "C", ele agacha
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            estaAgachado = !estaAgachado;
+            anim.SetBool("estaAgachado", estaAgachado);
+            anim.SetBool("estaAndando", false);
+        }
+
+        // Se o jogador apertar a tecla "C" novamente, ele deixa de ficar agachado
+        if (Input.GetKeyDown(KeyCode.C) && estaAgachado)
+        {
+            anim.SetBool("estaAgachado", false);
+            anim.SetBool("estaParado", true);
+        }
     }
 }
