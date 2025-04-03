@@ -11,6 +11,8 @@ public class Movimentacao : MonoBehaviour
     // Variavel para velocidade do objeto
     private float speed;
 
+    private Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,7 @@ public class Movimentacao : MonoBehaviour
         controller = GetComponent<CharacterController>();
         // Referenciando a camera principal da cena
         playerCamera = Camera.main.transform;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,8 +43,10 @@ public class Movimentacao : MonoBehaviour
 
         if (movimento != Vector3.zero)
         {
-            // Fazendo a rotacao do personagem de forma suave
+            // Fazendo a rotacao do personagem de forma suavizada
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movimento), Time.deltaTime * 10);
-        }        
+        }
+
+        anim.SetBool("estaAndando", movimento != Vector3.zero);
     }
 }
