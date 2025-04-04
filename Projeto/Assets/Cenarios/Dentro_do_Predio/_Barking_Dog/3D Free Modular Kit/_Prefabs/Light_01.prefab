@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477736}
   - component: {fileID: 10844700}
+  - component: {fileID: 2211113097199925117}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -42,8 +43,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.89148086, g: 0.21323532, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 0.5636354, g: 0.7472094, b: 1, a: 1}
+  m_Intensity: 2
   m_Range: 6
   m_SpotAngle: 165
   m_InnerSpotAngle: 159.24054
@@ -97,6 +98,29 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &2211113097199925117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &156856
 GameObject:
   m_ObjectHideFlags: 0

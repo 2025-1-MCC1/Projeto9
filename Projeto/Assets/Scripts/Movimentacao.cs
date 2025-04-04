@@ -70,6 +70,12 @@ public class Movimentacao : MonoBehaviour
             anim.SetBool("estaAndandoAgachado", false);
             anim.SetBool("estaAgachado", true);
         }
+
+        else if (movimento != Vector3.zero && estaAgachado && Input.GetKeyDown(KeyCode.C))
+        {
+            anim.SetBool("estaAgachado", false);
+            anim.SetBool("estaAndando", true);
+        }
     }
 
     void Agachar()
