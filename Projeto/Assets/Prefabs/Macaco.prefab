@@ -53,15 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.78
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.71
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Macaco
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -114,6 +118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1857858238598175300}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5615385860731101856}
   m_SourcePrefab: {fileID: 100100000, guid: aabe51e54f685724d9418b962c3e7d2a, type: 3}
 --- !u!4 &5103550918382597911 stripped
 Transform:
@@ -207,3 +214,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5615385860731101856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591399436164033965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd40085d09ca99249b590a5d844fd3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tablet: {fileID: 0}
+  map: {fileID: 0}
+  darkBg: {fileID: 0}
