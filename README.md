@@ -6,7 +6,7 @@
 </p>
 
 # Inglorious
-# Integrantes: <a href="
+# Integrantes: <a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa, <a ref="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira, <a href="https://github.com/Mura173">Murilo Ângelo Pimentel Braggio e <a href="https://github.com/Nathan-bit711">Nathan Santos de Lima
 
 
 
