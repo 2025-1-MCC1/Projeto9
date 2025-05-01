@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Robo
   - Tablet
+  - Door
+  - Gerador
   layers:
   - Default
   - TransparentFX

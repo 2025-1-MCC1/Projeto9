@@ -95,4 +95,12 @@ public class Movimentacao : MonoBehaviour
             anim.SetBool("estaParado", true);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Door") && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Entrou na porta");
+        }
+    }
 }

@@ -6,15 +6,20 @@ public class AtivarLuz : MonoBehaviour
     // Variavel do tipo Luz
     public Light luz;
     // Variavel para determinar se a luz está ligada ou não
-    private bool ligada = true;
+    private ControleMapa controleMapa;
+
+    private void Start()
+    {
+        controleMapa = FindAnyObjectByType<ControleMapa>();
+    }
 
     // Metodo que é utilizada em outro script para alterar a luz
     public void AlternarLuz()
     {
         // Muda o estado da variavel "ligada"
-        ligada = !ligada;
+        controleMapa.luzLigada = !controleMapa.luzLigada;
         // Se a luz estiver acesa, a variavel ligada sera verdadeira
-        luz.enabled = ligada;
+        luz.enabled = controleMapa.luzLigada;
     }
 
     // Metodo para verificar se a luz esta ligada
