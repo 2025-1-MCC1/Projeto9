@@ -22,7 +22,7 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
 
 -Raiz<br>
 |<br>
-|-->documentos<br>
+|-->Docs<br>
   &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
 |-->executáveis<br>
