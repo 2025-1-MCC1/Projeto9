@@ -6,7 +6,7 @@
 </p>
 
 # Inglorious
-# Integrantes: <a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa, <a ref="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira, <a href="https://github.com/Mura173">Murilo Ângelo Pimentel Braggio e <a href="https://github.com/Nathan-bit711">Nathan Santos de Lima
+# Integrantes: <a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa</a>,<a href="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira</a>, <a href="https://github.com/Mura173">Murilo Ângelo Pimentel Braggio</a> e <a href="https://github.com/Nathan-bit711">Nathan Santos de Lima</a>.
 
 ![Capa do jogo](https://github.com/user-attachments/assets/f7ff1cb1-547b-4055-a805-a6e846960833) 
 
