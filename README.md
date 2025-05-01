@@ -8,9 +8,14 @@
 # Inglorious
 # Integrantes: <a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa, <a ref="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira, <a href="https://github.com/Mura173">Murilo Ângelo Pimentel Braggio e <a href="https://github.com/Nathan-bit711">Nathan Santos de Lima
 
+![Capa do jogo](https://github.com/user-attachments/assets/f7ff1cb1-547b-4055-a805-a6e846960833) 
 
+<a> imagem feita com chatgpt</a>
+# Descrição do jogo
+No ano de 2055, na china, ocorria uma série de experimentos com mamíferos para a implementação de novas tecnologias.
+Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvolveu uma inteligência acentuada e percebeu que algo estava errado, para salvar os outros que estavam junto dele, para enfrentar esse ambiente nosso personagem será capaz de escapar desse local completamente desconhecido?
 
-
+ 
 
 
 ## 🛠 Estrutura de pastas
@@ -32,7 +37,7 @@
 
 
 ## 📋 Licença/License
-Utilize o link <https://chooser-beta.creativecommons.org/> para fazer uma licença CC BY 4.0.
+Inglorious © 2025 by Bruno Rodrigues da Costa, Mariah Alice Pimentel Lôbo Pereira, Murilo Ângelo Pimentel Braggio e Nathan Santos de Lima is licensed under Creative Commons Attribution 4.0 International 
 
 ## 🎓 Referências
 
