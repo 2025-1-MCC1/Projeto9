@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 477736}
   - component: {fileID: 10844700}
   - component: {fileID: 2211113097199925117}
+  - component: {fileID: 6779985883321401449}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -121,6 +122,21 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &6779985883321401449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightBar: {fileID: 0}
+  sensorPoint: {fileID: 0}
+  maxLightIntensity: 1
 --- !u!1 &156856
 GameObject:
   m_ObjectHideFlags: 0
