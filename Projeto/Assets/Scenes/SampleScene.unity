@@ -887,6 +887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 121509468}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!4 &121509470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -1716,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -3.8, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &295935899
@@ -1819,12 +1821,12 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 13.858139
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 21.946, y: 16.002}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -2074,6 +2076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 356921160}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!4 &356921163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -3811,6 +3815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 649476245}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!114 &649476244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6003,6 +6009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1150193021}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!114 &1150193020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6647,6 +6655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1313863234}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!114 &1313863233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6776,6 +6786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1349292893}
+  lightBar: {fileID: 1381617912}
+  lightPercentage: {fileID: 1381617913}
 --- !u!4 &1349292895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493048, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
@@ -6816,6 +6828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381617911}
   - component: {fileID: 1381617912}
+  - component: {fileID: 1381617913}
   m_Layer: 5
   m_Name: Lightbar
   m_TagString: Untagged
@@ -6889,12 +6902,29 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1381617913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381617910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightBar: {fileID: 1381617912}
+  lights: []
+  light: {fileID: 1349292893}
+  luzLigada: 0
+  maxLightIntensity: 100
 --- !u!4 &1408358873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -7040,7 +7070,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429346852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7050,7 +7080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.7, y: -159}
+  m_AnchoredPosition: {x: 92.4, y: -158.3}
   m_SizeDelta: {x: 50, y: 17.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429346854
@@ -7098,7 +7128,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -8917,6 +8947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1860346685}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!114 &1860346684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9260,9 +9292,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 1
+  m_Value: 64
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9885,6 +9917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 2019168517}
+  lightBar: {fileID: 0}
+  lightPercentage: {fileID: 0}
 --- !u!1001 &2025389391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10264,7 +10298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.3, y: 0}
+  m_AnchoredPosition: {x: 34.1, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105376064
