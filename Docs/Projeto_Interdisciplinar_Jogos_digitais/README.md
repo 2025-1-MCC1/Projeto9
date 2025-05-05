@@ -1,3 +1,3 @@
 
 # Entrega 1 
-[Projeto Interdisciplinar (GDD)](Docs/Projeto_Interdisciplinar_Jogos_digitais/GDD-Inglorious.pdf)
+[Projeto Interdisciplinar (GDD)](https://github.com/2025-1-MCC1/Projeto9/blob/main/Docs/Projeto_Interdisciplinar_Jogos_digitais/GDD-Inglorious.pdf)
