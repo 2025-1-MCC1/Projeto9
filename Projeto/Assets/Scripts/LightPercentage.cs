@@ -1,53 +1,81 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
-using static UnityEngine.Rendering.DebugUI;
 
 public class LightPercentage : MonoBehaviour
 {
-    public Slider lightBar; // Changed UnityEngine.UIElements.Slider to UnityEngine.UI.Slider
-    public Light[] lights;
-    public Light light;
-    public bool luzLigada;
-    public float maxLightIntensity = 100; // intensidade máxima da luz
-    private float LightIntensity = 0;
+    public Slider lightBar; 
+    public Light mainLight; 
+    public bool luzLigada; 
+    public float maxLightIntensity = 100; // int máxima da luz
+    private float currentLightIntensity = 0; // int atual da luz
 
-    public void OnSliderValueChanged(float value) // valor do slider
+    // mudança de valor do slider
+    public void OnSliderValueChanged(float value)
     {
-        Debug.Log("Valor do Slider: " + value);
+        if (luzLigada)
+        {
+            currentLightIntensity = value * maxLightIntensity; // ajusta a int com base no slider
+            mainLight.intensity = currentLightIntensity;
+            Debug.Log($"Intensidade da luz ajustada para: {currentLightIntensity}");
+        }
     }
 
     void Start()
     {
         if (lightBar != null)
         {
-            // Adiciona o evento para escutar mudanças de valor
-            lightBar.onValueChanged.AddListener(OnSliderValueChanged); // UnityEngine.UI.Slider supports onValueChanged
+            // add o evento para escutar mudanças de valor no slider
+            lightBar.onValueChanged.AddListener(OnSliderValueChanged);
+            lightBar.value = 0; // para o slider começar no valor mínimo
         }
         else
         {
-            Debug.LogWarning("LightBar não atribuído no Inspector!"); // checa se o slider foi atribuído
+            Debug.LogWarning("LightBar não foi atribuído no Inspector!");
+        }
+
+        if (mainLight != null)
+        {
+            mainLight.intensity = 0; // garante que a luz comece apagada
+        }
+        else
+        {
+            Debug.LogError("Nenhuma luz foi atribuída ao script!");
         }
     }
 
     void Update()
     {
-        if (luzLigada) // verifica a ação da luz
+        if (luzLigada)
         {
-            LightIntensity -= Time.deltaTime;
-            lightBar.value = LightIntensity;
-            light.intensity = LightIntensity;
+            // atualiza o valor do slider com base na intensidade atual
+            lightBar.value = currentLightIntensity / maxLightIntensity;
         }
         else
         {
-            light.intensity = 0;
+            // garante que a luz esteja apagada quando desligada
+            currentLightIntensity = 0;
+            mainLight.intensity = 0;
         }
     }
 
-    public void TurnLight(bool l) // ligar e desligar a luz pelo slider
+    // método para ligar ou desligar a luz
+    public void TurnLight(bool ligar)
     {
-        Debug.Log("Ligou a luz");
-        LightIntensity = maxLightIntensity;
-        luzLigada = l;
+        luzLigada = ligar;
+
+        if (ligar)
+        {
+            Debug.Log("Luz ligada.");
+            currentLightIntensity = maxLightIntensity;
+            mainLight.intensity = currentLightIntensity;
+            lightBar.value = 100; // define o slider no valor máximo
+        }
+        else
+        {
+            Debug.Log("Luz desligada.");
+            currentLightIntensity = 0;
+            mainLight.intensity = 0;
+            lightBar.value = 0; // define o slider no valor mínimo
+        }
     }
 }
