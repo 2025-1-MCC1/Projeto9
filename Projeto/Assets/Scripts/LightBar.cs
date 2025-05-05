@@ -5,7 +5,7 @@ public class LightBar: MonoBehaviour
 {
     public Slider lightBar;
     public Transform sensorPoint; 
-    public float maxLightIntensity = 1.0f; 
+    public float maxLightIntensity = 1.0f;
 
     void Update()
     {
