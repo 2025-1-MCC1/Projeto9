@@ -8,6 +8,7 @@ TagManager:
   - Tablet
   - Door
   - Gerador
+  - mainLight
   layers:
   - Default
   - TransparentFX

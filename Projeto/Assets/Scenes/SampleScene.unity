@@ -1718,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -3.8, y: 0}
+  m_AnchoredPosition: {x: -37.3, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &295935899
@@ -4647,6 +4647,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1310666549}
     m_Modifications:
+    - target: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_TagString
+      value: mainLight
+      objectReference: {fileID: 0}
     - target: {fileID: 447500, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.02
@@ -6786,13 +6790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1349292893}
-  lightBar: {fileID: 1381617912}
-  lightPercentage: {fileID: 1381617913}
---- !u!4 &1349292895 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 493048, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-  m_PrefabInstance: {fileID: 838942598}
-  m_PrefabAsset: {fileID: 0}
+  lightBar: {fileID: 1925282573}
+  lightPercentage: {fileID: 1349292896}
 --- !u!114 &1349292896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6802,12 +6801,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349292889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
+  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lightBar: {fileID: 1925282573}
-  sensorPoint: {fileID: 1349292895}
-  maxLightIntensity: 1
+  mainLight: {fileID: 1349292893}
+  luzLigada: 0
+  Spotlight: {fileID: 0}
+  maxLightIntensity: 100
+  currentLightIntensity: 0
 --- !u!4 &1373854269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492620, guid: 0f9396310131e47e3979f1a7cb96c071, type: 3}
@@ -6920,11 +6922,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightBar: {fileID: 1381617912}
-  lights: []
-  light: {fileID: 1349292893}
+  lightBar: {fileID: 0}
+  mainLight: {fileID: 0}
   luzLigada: 0
+  Spotlight: {fileID: 0}
   maxLightIntensity: 100
+  currentLightIntensity: 0
 --- !u!4 &1408358873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -8455,7 +8458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.3, y: 0}
+  m_AnchoredPosition: {x: 1.1, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743588312
@@ -9219,6 +9222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925282572}
   - component: {fileID: 1925282573}
+  - component: {fileID: 1925282574}
   m_Layer: 5
   m_Name: Lightbar (2)
   m_TagString: Untagged
@@ -9244,7 +9248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -174.2, y: 66}
+  m_AnchoredPosition: {x: -171.2, y: 66}
   m_SizeDelta: {x: 50, y: 17.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925282573
@@ -9294,10 +9298,28 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 64
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1925282574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925282571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightBar: {fileID: 1925282573}
+  mainLight: {fileID: 1349292893}
+  luzLigada: 0
+  Spotlight: {fileID: 0}
+  maxLightIntensity: 100
+  currentLightIntensity: 0
 --- !u!1001 &1925543641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9645,7 +9667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -5.7, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2002712445

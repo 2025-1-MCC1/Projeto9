@@ -25,7 +25,7 @@ public class AtivarLuz : MonoBehaviour
         controleMapa.luzLigada = !controleMapa.luzLigada;
         // Se a luz estiver acesa, a variavel ligada sera verdadeira
         luz.enabled = controleMapa.luzLigada;
-        lightPercentage.TurnLight(true);
+       lightPercentage.TurnLight(true);
     }
 
     // Metodo para verificar se a luz esta ligada
