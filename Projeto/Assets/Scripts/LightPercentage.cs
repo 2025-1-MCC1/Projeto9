@@ -1,20 +1,23 @@
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UI;
 
 public class LightPercentage : MonoBehaviour
 {
-    public Slider lightBar; 
-    public Light mainLight; 
-    public bool luzLigada;
-    public GameObject Spotlight;     
-    public float maxLightIntensity = 100f; // int máxima da luz
+    public Slider lightBar;
+    public Light mainLight;
+    public ControleMapa controleMapa;
+    public float maxLightIntensity = 15f; // int máxima da luz
     public float currentLightIntensity = 0f; // int atual da luz
+
+    private void Awake()
+    {
+        controleMapa = FindAnyObjectByType<ControleMapa>();
+    }
 
     // Método chamado quando o valor do slider muda
     public void OnSliderValueChanged(float value)
     {
-        if (luzLigada)
+        if (controleMapa.luzLigada)
         {
             currentLightIntensity = value * maxLightIntensity; // ajusta a intensidade com base no slider
             mainLight.intensity = currentLightIntensity;
@@ -35,36 +38,35 @@ public class LightPercentage : MonoBehaviour
             Debug.LogWarning("LightBar não foi atribuído no Inspector!");
         }
 
-        if (mainLight != null)
+        /*if (mainLight != null)
         {
             mainLight.intensity = 0; // garante que a luz comece apagada
         }
         else
         {
             Debug.LogError("Nenhuma luz foi atribuída ao script!");
-        }
-        if (Spotlight == null) // Verifica se a referência não foi atribuída no Inspector
-        {
-            Spotlight = GameObject.Find("Spotlight"); 
-        }
-         
-        /*void Update()
-        {
-            if (luzLigada)
-            {
-                // att o valor do slider com base na intensidade atual
-                lightBar.value = currentLightIntensity / maxLightIntensity;
-            }
-            else
-            {
-                // garante q a luz esteja apagada quando desligada
-                currentLightIntensity = 0;
-                mainLight.intensity = 0;
-            }
         }*/
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    void Update()
+    {
+        if (controleMapa.luzLigada)
+        {
+            // att o valor do slider com base na intensidade atual
+            lightBar.value = currentLightIntensity / maxLightIntensity;
+        }
+        else
+        {
+            // garante q a luz esteja apagada quando desligada
+            currentLightIntensity = 0;
+            //mainLight.intensity = 0;
+        }
+    }
+
+>>>>>>> Stashed changes
     // liga ou desliga a luz
     public void TurnLight(bool ligar)
 =======
@@ -87,11 +89,12 @@ public class LightPercentage : MonoBehaviour
   public void TurnLight(bool ligar)
 >>>>>>> Stashed changes
     {
-        luzLigada = ligar;
+        controleMapa.luzLigada = ligar;
 
         if (ligar)
         {
             Debug.Log("Luz ligada.");
+            
             currentLightIntensity = maxLightIntensity;
             mainLight.intensity = currentLightIntensity;
             lightBar.value = 1; // define o slider no valor máximo
@@ -100,7 +103,7 @@ public class LightPercentage : MonoBehaviour
         {
             Debug.Log("Luz desligada.");
             currentLightIntensity = 0;
-            mainLight.intensity = 0;
+            //mainLight.intensity = 0;
             lightBar.value = 0; // define o slider no valor mínimo
         }
     }

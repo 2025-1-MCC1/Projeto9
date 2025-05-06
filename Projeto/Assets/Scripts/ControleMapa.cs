@@ -26,9 +26,9 @@ public class ControleMapa : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         // Referenciando o tablet
         tablet = GameObject.Find("Tablet");
+        tablet.gameObject.SetActive(false);
 
         // Deixando os objetos não ativos
         map.gameObject.SetActive(false);
@@ -46,6 +46,7 @@ public class ControleMapa : MonoBehaviour
             Debug.Log("Pressionou E");
             luzLigada = true;
             portaPrincipal.SetActive(false);
+            tablet.gameObject.SetActive(true);
         }
     }
 

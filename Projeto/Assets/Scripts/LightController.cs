@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
-    Light[] lights;
+    public Light[] lights;
     ControleMapa controleMapa;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

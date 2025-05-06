@@ -887,6 +887,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 121509468}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &121509470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -1865,7 +1869,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.083067104, y: -0.0000000204552, z: -0.0000000017050469, w: 0.996544}
-  m_LocalPosition: {x: -25.507557, y: -1.4648187, z: 1.924855}
+  m_LocalPosition: {x: -25.797558, y: -1.4648187, z: 5.174855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2078,29 +2082,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 356921160}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &356921163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
   m_PrefabInstance: {fileID: 2013409444}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
---- !u!114 &356921164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356921156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 1925282573}
-  sensorPoint: {fileID: 356921163}
-  maxLightIntensity: 1
->>>>>>> Stashed changes
 --- !u!1001 &372278993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3145,7 +3135,7 @@ Transform:
   m_GameObject: {fileID: 518961756}
   serializedVersion: 2
   m_LocalRotation: {x: -0.08306709, y: -0.000000020455198, z: -0.0000000017050461, w: 0.996544}
-  m_LocalPosition: {x: -25.507557, y: -1.4648187, z: 1.924855}
+  m_LocalPosition: {x: -25.797558, y: -1.4648187, z: 5.174855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3833,6 +3823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 649476245}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &649476244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3861,26 +3855,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10822286, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 1609907617}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &649476246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 454048, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-  m_PrefabInstance: {fileID: 1609907617}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &649476247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649476241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 1381617912}
-  sensorPoint: {fileID: 649476246}
-  maxLightIntensity: 1
 --- !u!4 &654372331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 442594, guid: 1a5e2f40365fe44ada271dd97ea7506f, type: 3}
@@ -4713,7 +4687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493048, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.306
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 10820366, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Color.b
@@ -4769,23 +4743,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Range
-      value: 15.61
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Color.b
-      value: 0.6509804
+      value: 0.6839622
       objectReference: {fileID: 0}
     - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Color.g
-      value: 0.84705883
+      value: 0.932633
       objectReference: {fileID: 0}
     - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       propertyPath: m_Intensity
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_SpotAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 21.80208
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4802,10 +4800,10 @@ PrefabInstance:
       addedObject: {fileID: 1349292891}
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349292894}
+      addedObject: {fileID: 1349292896}
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349292896}
+      addedObject: {fileID: 1349292894}
   m_SourcePrefab: {fileID: 100100000, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
 --- !u!1 &841117262
 GameObject:
@@ -6029,6 +6027,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1150193021}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &1150193020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6549,6 +6551,7 @@ Transform:
   - {fileID: 1730911470}
   - {fileID: 2069510851}
   - {fileID: 125705897}
+  - {fileID: 1313216592}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1312510246
@@ -6646,14 +6649,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313216590}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.015524, y: -2.1014357, z: 18.43417}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.161486, y: -0.8043531, z: 20.09622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 717067047}
   - {fileID: 113504400}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1310666549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313863230 stripped
 GameObject:
@@ -6673,6 +6676,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1313863234}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &1313863233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6802,8 +6809,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1349292893}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   lightBar: {fileID: 1925282573}
+=======
+>>>>>>> Stashed changes
   lightPercentage: {fileID: 1349292896}
 =======
 --- !u!4 &1349292895 stripped
@@ -6826,9 +6836,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightBar: {fileID: 1925282573}
   mainLight: {fileID: 1349292893}
-  luzLigada: 0
-  Spotlight: {fileID: 0}
-  maxLightIntensity: 100
+  controleMapa: {fileID: 0}
+  maxLightIntensity: 15
   currentLightIntensity: 0
 --- !u!4 &1373854269 stripped
 Transform:
@@ -6929,6 +6938,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 --- !u!114 &1381617913
 MonoBehaviour:
@@ -6950,6 +6960,8 @@ MonoBehaviour:
   currentLightIntensity: 0
 =======
 >>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1408358873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -8041,18 +8053,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 170012, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1860346683}
-    - targetCorrespondingSourceObject: {fileID: 170012, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1860346687}
     - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 649476244}
     - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 649476243}
-    - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 649476247}
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1313863233}
@@ -8480,8 +8486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.1, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -4.1843, y: 0}
+  m_SizeDelta: {x: -0.5685, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743588312
 MonoBehaviour:
@@ -8972,6 +8978,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1860346685}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &1860346684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9000,26 +9010,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10820366, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 1609907617}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1860346686 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 447500, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-  m_PrefabInstance: {fileID: 1609907617}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1860346687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860346681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 1429346854}
-  sensorPoint: {fileID: 1860346686}
-  maxLightIntensity: 1
 --- !u!4 &1871955922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -9242,7 +9232,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1925282572}
   - component: {fileID: 1925282573}
-  - component: {fileID: 1925282574}
   m_Layer: 5
   m_Name: Lightbar (2)
   m_TagString: Untagged
@@ -9319,32 +9308,18 @@ MonoBehaviour:
 <<<<<<< HEAD
   m_MaxValue: 100
   m_WholeNumbers: 1
+<<<<<<< Updated upstream
 =======
   m_MaxValue: 1
   m_WholeNumbers: 0
 >>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
   m_Value: 0
+=======
+  m_Value: 100
+>>>>>>> Stashed changes
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1925282574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925282571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 1925282573}
-  mainLight: {fileID: 1349292893}
-  luzLigada: 0
-  Spotlight: {fileID: 0}
-  maxLightIntensity: 100
-  currentLightIntensity: 0
 --- !u!1001 &1925543641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9604,6 +9579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f4eaf29672aea41bee32593b394e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lights: []
 --- !u!4 &1981768320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484998, guid: 13990f94448cc49c08e917134d8b0479, type: 3}
@@ -9692,8 +9668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.7, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 3.9284, y: 0}
+  m_SizeDelta: {x: -0.7433, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2002712445
 PrefabInstance:
@@ -9964,6 +9940,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 2019168517}
+<<<<<<< Updated upstream
+=======
+  lightPercentage: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &2025389391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10465,7 +10445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.5
+      value: -25.79
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10473,7 +10453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.9
+      value: 8.15
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10531,6 +10511,14 @@ PrefabInstance:
       propertyPath: portaPrincipal
       value: 
       objectReference: {fileID: 841117262}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: lights.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: 'lights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1349292893}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10552,4 +10540,3 @@ SceneRoots:
   - {fileID: 266148543}
   - {fileID: 788400524}
   - {fileID: 1310666549}
-  - {fileID: 1313216592}
