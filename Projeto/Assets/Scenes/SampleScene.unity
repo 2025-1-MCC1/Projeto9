@@ -887,15 +887,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 121509468}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!4 &121509470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
   m_PrefabInstance: {fileID: 781291619}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &121509471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121509465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &125101631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1720,11 +1740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: -37.3, y: 0}
-=======
-  m_AnchoredPosition: {x: -5, y: 0}
->>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &295935899
@@ -2082,10 +2098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 356921160}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!4 &356921163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -3823,10 +3836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 649476245}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &649476244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,6 +4538,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 121509469}
+    - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 121509471}
   m_SourcePrefab: {fileID: 100100000, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
 --- !u!1 &788400523
 GameObject:
@@ -6027,10 +6040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1150193021}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &1150193020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6676,10 +6686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1313863234}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &1313863233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6809,19 +6816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1349292893}
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  lightBar: {fileID: 1925282573}
-=======
->>>>>>> Stashed changes
   lightPercentage: {fileID: 1349292896}
-=======
---- !u!4 &1349292895 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 493048, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-  m_PrefabInstance: {fileID: 838942598}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
 --- !u!114 &1349292896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6938,30 +6933,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< Updated upstream
-<<<<<<< HEAD
---- !u!114 &1381617913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381617910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 0}
-  mainLight: {fileID: 0}
-  luzLigada: 0
-  Spotlight: {fileID: 0}
-  maxLightIntensity: 100
-  currentLightIntensity: 0
-=======
->>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
-=======
->>>>>>> Stashed changes
 --- !u!4 &1408358873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -8978,10 +8949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1860346685}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &1860346684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9305,18 +9273,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-<<<<<<< HEAD
   m_MaxValue: 100
   m_WholeNumbers: 1
-<<<<<<< Updated upstream
-=======
-  m_MaxValue: 1
-  m_WholeNumbers: 0
->>>>>>> parent of 9bcc965 (continuação de arrumar bugs)
   m_Value: 0
-=======
-  m_Value: 100
->>>>>>> Stashed changes
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9940,10 +9899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 2019168517}
-<<<<<<< Updated upstream
-=======
   lightPercentage: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1001 &2025389391
 PrefabInstance:
   m_ObjectHideFlags: 0

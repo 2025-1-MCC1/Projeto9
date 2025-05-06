@@ -48,9 +48,6 @@ public class LightPercentage : MonoBehaviour
         }*/
     }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
     void Update()
     {
         if (controleMapa.luzLigada)
@@ -66,28 +63,8 @@ public class LightPercentage : MonoBehaviour
         }
     }
 
->>>>>>> Stashed changes
-    // liga ou desliga a luz
-    public void TurnLight(bool ligar)
-=======
-    void Update()
-    {
-        if (luzLigada)
-        {
-            // atualiza o valor do slider com base na intensidade atual
-            lightBar.value = currentLightIntensity / maxLightIntensity;
-        }
-        else
-        {
-            // garante que a luz esteja apagada quando desligada
-            currentLightIntensity = 0;
-            mainLight.intensity = 0;
-        }
-    }
-
     // método para ligar ou desligar a luz
   public void TurnLight(bool ligar)
->>>>>>> Stashed changes
     {
         controleMapa.luzLigada = ligar;
 

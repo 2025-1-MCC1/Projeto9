@@ -1,9 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
-<<<<<<< Updated upstream
-=======
 using UnityEngine.UI;
->>>>>>> Stashed changes
+
 
 public class AtivarLuz : MonoBehaviour
 {
@@ -26,12 +24,7 @@ public class AtivarLuz : MonoBehaviour
         // Se a luz estiver acesa, a variavel ligada sera verdadeira
         luz.enabled = controleMapa.luzLigada;
 
-<<<<<<< Updated upstream
-       lightPercentage.TurnLight(true);
-
-=======
         lightPercentage.TurnLight(controleMapa.luzLigada);
->>>>>>> Stashed changes
     }
 
     // Metodo para verificar se a luz esta ligada
