@@ -1,7 +1,5 @@
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class AtivarLuz : MonoBehaviour
 {
@@ -9,9 +7,6 @@ public class AtivarLuz : MonoBehaviour
     public Light luz;
     // Variavel para determinar se a luz est· ligada ou n„o
     private ControleMapa controleMapa;
-
-    public Slider lightBar;
-    public LightPercentage lightPercentage;
 
     private void Start()
     {
@@ -25,7 +20,10 @@ public class AtivarLuz : MonoBehaviour
         controleMapa.luzLigada = !controleMapa.luzLigada;
         // Se a luz estiver acesa, a variavel ligada sera verdadeira
         luz.enabled = controleMapa.luzLigada;
+<<<<<<< HEAD
        lightPercentage.TurnLight(true);
+=======
+>>>>>>> parent of 9bcc965 (continua√ß√£o de arrumar bugs)
     }
 
     // Metodo para verificar se a luz esta ligada

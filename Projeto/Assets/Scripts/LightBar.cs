@@ -18,7 +18,7 @@ public class LightBar: MonoBehaviour
         Vector3 point = sensorPoint.position;
 
         Vector3[] directions = {
-          Vector3.forward, Vector3.back, Vector3.left, Vector3.right
+            Vector3.up, Vector3.down, Vector3.forward, Vector3.back, Vector3.left, Vector3.right
         };
 
         float totalLight = 0f;

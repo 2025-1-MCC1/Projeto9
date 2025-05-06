@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 7f5f9a507e6414d3ba63e886f31fe808
-timeCreated: 1489701323
-licenseType: Store
-TextScriptImporter:
+guid: 78394dc49b457e047b687b16b6df6108
+DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -11,5 +10,5 @@ AssetOrigin:
   productId: 85732
   packageName: 3D Free Modular Kit
   packageVersion: 2.0
-  assetPath: Assets/Cenarios/Dentro_do_Predio/_Barking_Dog/Readme_Please.txt
+  assetPath: Assets/Cenarios/Dentro_do_Predio/_Barking_Dog/3D Free Modular Kit_HDRP.unitypackage
   uploadId: 679479

@@ -20,6 +20,7 @@ public class ControleMapa : MonoBehaviour
     private bool noGerador;
 
     public bool luzLigada;
+
     public GameObject portaPrincipal;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
