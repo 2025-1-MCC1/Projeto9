@@ -33,19 +33,12 @@ public class LightPercentage : MonoBehaviour
             lightBar.onValueChanged.AddListener(OnSliderValueChanged);
             lightBar.value = 0; // para q o slider comece no valor mínimo
         }
-        else
-        {
-            Debug.LogWarning("LightBar não foi atribuído no Inspector!");
-        }
 
-        /*if (mainLight != null)
+        if (mainLight != null)
         {
             mainLight.intensity = 0; // garante que a luz comece apagada
         }
-        else
-        {
-            Debug.LogError("Nenhuma luz foi atribuída ao script!");
-        }*/
+        
     }
 
     void Update()
