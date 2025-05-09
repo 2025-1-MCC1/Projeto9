@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
-    public Light[] lights;
+    public Light[] mainLight;
     ControleMapa controleMapa;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -10,9 +10,9 @@ public class LightController : MonoBehaviour
     {
         controleMapa = FindAnyObjectByType<ControleMapa>();
 
-        lights = FindObjectsOfType<Light>();
+        mainLight = GameObject.FindWithTag<>("mainLight");
 
-            foreach (Light light in lights)
+            foreach (Light light in mainLight)
             {
                 light.enabled = false; // Desativa a luz
             }    

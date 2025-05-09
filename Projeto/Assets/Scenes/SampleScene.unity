@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 121509468}
-  lightPercentage: {fileID: 0}
+  mainLight: []
 --- !u!4 &121509470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -2707,7 +2707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 356921160}
-  lightPercentage: {fileID: 356921164}
+  mainLight: []
 --- !u!4 &356921163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -5027,7 +5027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 649476245}
-  lightPercentage: {fileID: 649476247}
+  mainLight: []
 --- !u!114 &649476244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6229,15 +6229,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1349292891}
-    - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349292896}
-    - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349292894}
-    - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349292898}
   m_SourcePrefab: {fileID: 100100000, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
 --- !u!1 &841117262
 GameObject:
@@ -6937,7 +6928,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1586295419037630584, guid: 4f2d273ad7e03c84f8fe6858c76392ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8770785
+      value: -4.85
       objectReference: {fileID: 0}
     - target: {fileID: 1586295419037630584, guid: 4f2d273ad7e03c84f8fe6858c76392ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7083,7 +7074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regioes:
-  - {fileID: 1349292894}
+  - {fileID: 0}
   - {fileID: 649476243}
   - {fileID: 1860346683}
 --- !u!114 &994780260
@@ -7887,7 +7878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1150193021}
-  lightPercentage: {fileID: 0}
+  mainLight: []
 --- !u!114 &1150193020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8721,7 +8712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1313863234}
-  lightPercentage: {fileID: 0}
+  mainLight: []
 --- !u!114 &1313863233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8913,50 +8904,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 838942598}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1349292894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349292889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  luz: {fileID: 1349292893}
-  lightPercentage: {fileID: 1349292896}
---- !u!114 &1349292896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349292889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 122341875}
-  mainLight: {fileID: 1349292893}
-  controleMapa: {fileID: 0}
-  maxLightIntensity: 15
-  currentLightIntensity: 0
---- !u!114 &1349292898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349292889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSlider: {fileID: 122341875}
 --- !u!4 &1373854269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492620, guid: 0f9396310131e47e3979f1a7cb96c071, type: 3}
@@ -10662,7 +10609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regioes:
-  - {fileID: 1349292894}
+  - {fileID: 0}
   - {fileID: 356921162}
   - {fileID: 2019168518}
   - {fileID: 649476243}
@@ -12058,7 +12005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 1860346685}
-  lightPercentage: {fileID: 1860346687}
+  mainLight: []
 --- !u!114 &1860346684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13136,7 +13083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 2019168517}
-  lightPercentage: {fileID: 0}
+  mainLight: []
 --- !u!114 &2019168520
 MonoBehaviour:
   m_ObjectHideFlags: 0

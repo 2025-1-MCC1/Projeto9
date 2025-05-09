@@ -1,36 +1,75 @@
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class AtivarLuz : MonoBehaviour
 {
-    // Variavel do tipo Luz
-    public Light luz;
-    // Variavel para determinar se a luz está ligada ou não
+    // Referência ao controle de mapa externo
     private ControleMapa controleMapa;
-    public LightPercentage lightPercentage;
 
-   void Start()
+    // Referência ao script do slider de luz ambiente
+    public LightSlider slider;
+
+    // Array de luzes com a tag "mainLight"
+    public Light[] mainLight;
+
+    // Intensidade máxima da luz
+    public float maxLightIntensity = 100f;
+
+    // Intensidade atual da luz
+    public float currentLightIntensity = 0f;
+
+    void Start()
     {
+        // Encontra o script ControleMapa na cena
         controleMapa = FindAnyObjectByType<ControleMapa>();
+
+        // Encontra todos os objetos com a tag "mainLight" e pega seus componentes Light
+        GameObject[] luzes = GameObject.FindGameObjectsWithTag("mainLight");
+        mainLight = new Light[luzes.Length];
+        for (int i = 0; i < luzes.Length; i++)
+        {
+            mainLight[i] = luzes[i].GetComponent<Light>();
+        }
     }
 
-    // Metodo que é utilizada em outro script para alterar a luz
+    // Alterna o estado da luz (ligar/desligar)
     public void AlternarLuz()
     {
-        // Muda o estado da variavel "ligada"
+        // Inverte o estado da luz no controle
         controleMapa.luzLigada = !controleMapa.luzLigada;
-        // Se a luz estiver acesa, a variavel ligada sera verdadeira
-        luz.enabled = controleMapa.luzLigada;
 
-        lightPercentage.TurnLight(controleMapa.luzLigada);
+        // Define intensidade e slider de acordo com o novo estado
+        currentLightIntensity = controleMapa.luzLigada ? maxLightIntensity : 0f;
+
+        foreach (Light luz in mainLight)
+        {
+            if (luz != null)
+            {
+                luz.intensity = currentLightIntensity;
+                luz.enabled = controleMapa.luzLigada;
+            }
+        }
+
+        // Atualiza o slider (se houver)
+        if (slider != null && slider.lightSlider != null)
+        {
+            slider.lightSlider.value = controleMapa.luzLigada ? 1f : 0f;
+        }
+
+        Debug.Log("Luz " + (controleMapa.luzLigada ? "ligada." : "desligada."));
     }
 
-    // Metodo para verificar se a luz esta ligada
+    // Verifica se qualquer luz do array está ligada
     public bool LuzEstaLigada()
     {
-        // Se a referencia da luz existir e se a luz estiver ligada, ele retorna true
-        return luz != null && luz.enabled;
+        foreach (Light luz in mainLight)
+        {
+            if (luz != null && luz.enabled)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
+
