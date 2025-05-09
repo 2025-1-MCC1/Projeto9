@@ -18,6 +18,8 @@ public class AtivarLuz : MonoBehaviour
     // Intensidade atual da luz
     public float currentLightIntensity = 0f;
 
+    public Slider lightSlider;
+
     void Start()
     {
         // Encontra o script ControleMapa na cena
@@ -50,11 +52,11 @@ public class AtivarLuz : MonoBehaviour
             }
         }
 
-        // Atualiza o slider (se houver)
+        /*// Atualiza o slider (se houver)
         if (slider != null && slider.lightSlider != null)
         {
             slider.lightSlider.value = controleMapa.luzLigada ? 1f : 0f;
-        }
+        }*/
 
         Debug.Log("Luz " + (controleMapa.luzLigada ? "ligada." : "desligada."));
     }

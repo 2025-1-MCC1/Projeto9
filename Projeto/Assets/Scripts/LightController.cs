@@ -3,14 +3,13 @@ using UnityEngine;
 public class LightController : MonoBehaviour
 {
     public Light[] mainLight;
+    public Light[] lights;
     ControleMapa controleMapa;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controleMapa = FindAnyObjectByType<ControleMapa>();
-
-        mainLight = GameObject.FindWithTag<>("mainLight");
 
             foreach (Light light in mainLight)
             {

@@ -15,10 +15,17 @@ public class IARobo : MonoBehaviour
     public Transform targetObj;
     public float speedTarget;
 
+    // Patrulheiro
+    public Transform[] patrolPoints;
+    public int targetPoint;
+    public float speed;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         targetObj = GameObject.FindGameObjectWithTag("Player").transform;
+
+        targetPoint = 0;
     }
 
     // Update is called once per frame
@@ -26,6 +33,26 @@ public class IARobo : MonoBehaviour
     {
         // Rotacao do robo
         transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+
+        PatrulhaInimigo();
+    }
+
+    void PatrulhaInimigo()
+    {
+        if (transform.position == patrolPoints[targetPoint].position)
+        {
+            IncreaseTargetInt();
+        }
+        transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
+    }
+
+    void IncreaseTargetInt()
+    {
+        targetPoint++;
+        if (targetPoint >= patrolPoints.Length)
+        {
+            targetPoint = 0;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
