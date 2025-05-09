@@ -52,11 +52,11 @@ public class AtivarLuz : MonoBehaviour
             }
         }
 
-        // Atualiza o slider (se houver)
+        /*// Atualiza o slider (se houver)
         if (slider != null && slider.LightSlider != null)
         {
             slider.LightSlider.value = controleMapa.luzLigada ? 1f : 0f;
-        }
+        }*/
 
         Debug.Log("Luz " + (controleMapa.luzLigada ? "ligada." : "desligada."));
     }
