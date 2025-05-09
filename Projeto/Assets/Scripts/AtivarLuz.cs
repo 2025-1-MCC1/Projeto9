@@ -6,19 +6,19 @@ public class AtivarLuz : MonoBehaviour
     // Referência ao controle de mapa externo
     private ControleMapa controleMapa;
 
-    // Referência ao script do slider de luz ambiente
-    public LightSlider slider;
+    // Referência ao script do slider da luz do ambiente
+    public Lightslider slider;
 
     // Array de luzes com a tag "mainLight"
     public Light[] mainLight;
 
-    // Intensidade máxima da luz
+    // Intensidade máxima da am
     public float maxLightIntensity = 100f;
 
     // Intensidade atual da luz
     public float currentLightIntensity = 0f;
 
-    public Slider lightSlider;
+    public GameObject LightSlider;
 
     void Start()
     {
@@ -52,11 +52,11 @@ public class AtivarLuz : MonoBehaviour
             }
         }
 
-        /*// Atualiza o slider (se houver)
-        if (slider != null && slider.lightSlider != null)
+        // Atualiza o slider (se houver)
+        if (slider != null && slider.LightSlider != null)
         {
-            slider.lightSlider.value = controleMapa.luzLigada ? 1f : 0f;
-        }*/
+            slider.LightSlider.value = controleMapa.luzLigada ? 1f : 0f;
+        }
 
         Debug.Log("Luz " + (controleMapa.luzLigada ? "ligada." : "desligada."));
     }
