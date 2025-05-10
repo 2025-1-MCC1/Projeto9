@@ -1038,6 +1038,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1972390119}
+        m_TargetAssemblyTypeName: Lightslider, Assembly-CSharp
+        m_MethodName: AlternarLuz
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &113504399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4947b5f0c3f97564291e9c7d8ee31bc1, type: 3}
@@ -1255,8 +1267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 121509468}
-  mainLight: []
+  lights:
+  - {fileID: 121509468}
+  indiceDaLuz: 5
 --- !u!4 &121509470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
@@ -2676,7 +2689,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.083067104, y: -0.0000000204552, z: -0.0000000017050469, w: 0.996544}
-  m_LocalPosition: {x: 0.39244395, y: -1.4648187, z: 2.0348551}
+  m_LocalPosition: {x: -27.007557, y: -1.4648187, z: 3.324855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2955,43 +2968,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 356921160}
-  mainLight: []
+  lights:
+  - {fileID: 356921160}
+  indiceDaLuz: 1
 --- !u!4 &356921163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477736, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
   m_PrefabInstance: {fileID: 2013409444}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &356921164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356921156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 1789825624}
-  mainLight: {fileID: 356921160}
-  controleMapa: {fileID: 0}
-  maxLightIntensity: 15
-  currentLightIntensity: 0
---- !u!114 &356921165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356921156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSlider: {fileID: 1789825624}
 --- !u!1001 &372278993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4276,7 +4260,7 @@ Transform:
   m_GameObject: {fileID: 518961756}
   serializedVersion: 2
   m_LocalRotation: {x: -0.08306709, y: -0.000000020455198, z: -0.0000000017050461, w: 0.996544}
-  m_LocalPosition: {x: 0.39244395, y: -1.4648187, z: 2.0348551}
+  m_LocalPosition: {x: -27.007557, y: -1.4648187, z: 3.324855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5289,8 +5273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 649476245}
-  mainLight: []
+  lights:
+  - {fileID: 649476245}
+  indiceDaLuz: 3
 --- !u!114 &649476244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5319,36 +5304,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10822286, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 1609907617}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &649476247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649476241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 578210332}
-  mainLight: {fileID: 649476245}
-  controleMapa: {fileID: 0}
-  maxLightIntensity: 15
-  currentLightIntensity: 0
---- !u!114 &649476249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649476241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSlider: {fileID: 578210332}
 --- !u!4 &653075781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
@@ -6057,6 +6012,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1972390119}
+        m_TargetAssemblyTypeName: Lightslider, Assembly-CSharp
+        m_MethodName: AlternarLuz
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &778256757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6704,6 +6671,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1349292891}
+    - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349292895}
   m_SourcePrefab: {fileID: 100100000, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
 --- !u!1 &841117262
 GameObject:
@@ -8417,6 +8387,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1972390119}
+        m_TargetAssemblyTypeName: Lightslider, Assembly-CSharp
+        m_MethodName: AlternarLuz
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1122189723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8472,8 +8454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 1150193021}
-  mainLight: []
+  lights: []
+  indiceDaLuz: 0
 --- !u!114 &1150193020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9337,8 +9319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 1313863234}
-  mainLight: []
+  lights: []
+  indiceDaLuz: 0
 --- !u!114 &1313863233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9639,6 +9621,21 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10897880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 838942598}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1349292895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349292889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 1349292893}
+  indiceDaLuz: 0
 --- !u!4 &1373854269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492620, guid: 0f9396310131e47e3979f1a7cb96c071, type: 3}
@@ -10767,12 +10764,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2019168518}
-    - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2019168521}
-    - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2019168520}
   m_SourcePrefab: {fileID: 100100000, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
 --- !u!1001 &1526862097
 PrefabInstance:
@@ -11406,24 +11397,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 170012, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1860346683}
-    - targetCorrespondingSourceObject: {fileID: 170012, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1860346687}
-    - targetCorrespondingSourceObject: {fileID: 170012, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1860346689}
     - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 649476244}
     - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 649476243}
-    - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 649476247}
-    - targetCorrespondingSourceObject: {fileID: 160880, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 649476249}
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1313863233}
@@ -11559,7 +11538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regioes:
-  - {fileID: 0}
+  - {fileID: 1349292895}
   - {fileID: 356921162}
   - {fileID: 2019168518}
   - {fileID: 649476243}
@@ -12052,6 +12031,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1972390119}
+        m_TargetAssemblyTypeName: Lightslider, Assembly-CSharp
+        m_MethodName: AlternarLuz
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1708149242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484706, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
@@ -12375,6 +12366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robo (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2110068280552135362, guid: 4f2d273ad7e03c84f8fe6858c76392ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5063707661889722910, guid: 4f2d273ad7e03c84f8fe6858c76392ab, type: 3}
       propertyPath: luzDaArea
       value: 
@@ -12676,6 +12671,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1615955698}
         m_TargetAssemblyTypeName: MapaLuzes, Assembly-CSharp
         m_MethodName: AlternarLuzRegiao
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972390119}
+        m_TargetAssemblyTypeName: Lightslider, Assembly-CSharp
+        m_MethodName: AlternarLuz
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13113,8 +13120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 1860346685}
-  mainLight: []
+  lights:
+  - {fileID: 1860346685}
+  indiceDaLuz: 4
 --- !u!114 &1860346684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13143,36 +13151,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10820366, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
   m_PrefabInstance: {fileID: 1609907617}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1860346687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860346681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 924327517}
-  mainLight: {fileID: 1860346685}
-  controleMapa: {fileID: 0}
-  maxLightIntensity: 15
-  currentLightIntensity: 0
---- !u!114 &1860346689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860346681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSlider: {fileID: 924327517}
 --- !u!4 &1871955922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644, type: 3}
@@ -13858,6 +13836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972390117}
   - component: {fileID: 1972390118}
+  - component: {fileID: 1972390119}
   m_Layer: 0
   m_Name: LightController
   m_TagString: Untagged
@@ -13892,7 +13871,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f4eaf29672aea41bee32593b394e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lights: []
+  lights:
+  - {fileID: 1349292893}
+  - {fileID: 356921160}
+  - {fileID: 2019168517}
+  - {fileID: 649476245}
+  - {fileID: 1860346685}
+  - {fileID: 121509468}
+  - {fileID: 1150193021}
+  - {fileID: 1313863234}
+--- !u!114 &1972390119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972390116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640453e2571026643b9beb34cf7f8ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luzesSliders:
+  - luz: {fileID: 1349292893}
+    slider: {fileID: 122341875}
+    ligada: 0
+  - luz: {fileID: 356921160}
+    slider: {fileID: 1789825624}
+    ligada: 0
+  - luz: {fileID: 2019168517}
+    slider: {fileID: 1273871420}
+    ligada: 0
+  - luz: {fileID: 649476245}
+    slider: {fileID: 578210332}
+    ligada: 0
+  - luz: {fileID: 1860346685}
+    slider: {fileID: 924327517}
+    ligada: 0
+  duracao: 5
 --- !u!4 &1981768320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484998, guid: 13990f94448cc49c08e917134d8b0479, type: 3}
@@ -14103,6 +14119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 187420415}
     m_Modifications:
+    - target: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 450040, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -14170,12 +14190,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 356921162}
-    - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 356921164}
-    - targetCorrespondingSourceObject: {fileID: 138980, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 356921165}
   m_SourcePrefab: {fileID: 100100000, guid: 530f5ce44fdac4197a29f5bec8818d85, type: 3}
 --- !u!1 &2019168513 stripped
 GameObject:
@@ -14222,38 +14236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480573e11e95324fad1ddbf2f2fd142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 2019168517}
-  mainLight: []
---- !u!114 &2019168520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019168513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a9465a34c06504e9c15a70d5221366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSlider: {fileID: 924327517}
---- !u!114 &2019168521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019168513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc333acec607e54bbd78458ef726cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightBar: {fileID: 924327517}
-  mainLight: {fileID: 2019168517}
-  controleMapa: {fileID: 0}
-  maxLightIntensity: 15
-  currentLightIntensity: 0
+  lights:
+  - {fileID: 2019168517}
+  indiceDaLuz: 2
 --- !u!1 &2020625661
 GameObject:
   m_ObjectHideFlags: 0
@@ -14903,7 +14888,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14911,7 +14896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.01
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 5103550918382597911, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14971,12 +14956,28 @@ PrefabInstance:
       objectReference: {fileID: 841117262}
     - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: lights.Array.size
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
       propertyPath: 'lights.Array.data[0]'
       value: 
       objectReference: {fileID: 1349292893}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: 'lights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 356921160}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: 'lights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2019168517}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: 'lights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 649476245}
+    - target: {fileID: 5615385860731101856, guid: 6d5ff9c5cb60ed3498aaec7c37f71ede, type: 3}
+      propertyPath: 'lights.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1860346685}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

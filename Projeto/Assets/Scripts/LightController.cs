@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
-    public Light[] mainLight;
     public Light[] lights;
     ControleMapa controleMapa;
 
@@ -11,7 +10,7 @@ public class LightController : MonoBehaviour
     {
         controleMapa = FindAnyObjectByType<ControleMapa>();
 
-            foreach (Light light in mainLight)
+            foreach (Light light in lights)
             {
                 light.enabled = false; // Desativa a luz
             }    

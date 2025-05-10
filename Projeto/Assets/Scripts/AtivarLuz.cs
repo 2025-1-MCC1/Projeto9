@@ -1,70 +1,48 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AtivarLuz : MonoBehaviour
 {
     // Referência ao controle de mapa externo
     private ControleMapa controleMapa;
 
-    // Referência ao script do slider da luz do ambiente
-    public Lightslider slider;
-
     // Array de luzes com a tag "mainLight"
-    public Light[] mainLight;
+    public Light[] lights;
 
-    // Intensidade máxima da am
-    public float maxLightIntensity = 100f;
-
-    // Intensidade atual da luz
-    public float currentLightIntensity = 0f;
-
-    public GameObject LightSlider;
+    // A luz que esta região controla (deve ser configurado no Inspector)
+    public int indiceDaLuz;
 
     void Start()
     {
         // Encontra o script ControleMapa na cena
         controleMapa = FindAnyObjectByType<ControleMapa>();
-
-        // Encontra todos os objetos com a tag "mainLight" e pega seus componentes Light
-        GameObject[] luzes = GameObject.FindGameObjectsWithTag("mainLight");
-        mainLight = new Light[luzes.Length];
-        for (int i = 0; i < luzes.Length; i++)
-        {
-            mainLight[i] = luzes[i].GetComponent<Light>();
-        }
     }
 
-    // Alterna o estado da luz (ligar/desligar)
+    // Alterna o estado de uma luz específica
     public void AlternarLuz()
     {
-        // Inverte o estado da luz no controle
-        controleMapa.luzLigada = !controleMapa.luzLigada;
-
-        // Define intensidade e slider de acordo com o novo estado
-        currentLightIntensity = controleMapa.luzLigada ? maxLightIntensity : 0f;
-
-        foreach (Light luz in mainLight)
+        // Verifica se o índice está dentro do limite do array de luzes
+        if (indiceDaLuz >= 0 && indiceDaLuz < lights.Length)
         {
-            if (luz != null)
-            {
-                luz.intensity = currentLightIntensity;
-                luz.enabled = controleMapa.luzLigada;
-            }
+            Light luz = lights[indiceDaLuz];
+
+            // Inverte o estado da luz individualmente
+            luz.enabled = !luz.enabled;
+
+            // Alterna o controle da luz no mapa
+            controleMapa.luzLigada = luz.enabled;
+
+            Debug.Log("Luz " + (luz.enabled ? "ligada." : "desligada.") + " (Índice: " + indiceDaLuz + ")");
         }
-
-        /*// Atualiza o slider (se houver)
-        if (slider != null && slider.LightSlider != null)
+        else
         {
-            slider.LightSlider.value = controleMapa.luzLigada ? 1f : 0f;
-        }*/
-
-        Debug.Log("Luz " + (controleMapa.luzLigada ? "ligada." : "desligada."));
+            Debug.LogError("Índice da luz fora do limite do array de luzes.");
+        }
     }
 
     // Verifica se qualquer luz do array está ligada
     public bool LuzEstaLigada()
     {
-        foreach (Light luz in mainLight)
+        foreach (Light luz in lights)
         {
             if (luz != null && luz.enabled)
             {
