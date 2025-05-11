@@ -4,84 +4,64 @@ using UnityEngine.UI;
 
 public class Lightslider : MonoBehaviour
 {
-    [System.Serializable]
-    public class LuzComSlider
-    {
-        public Light luz;
-        public Slider slider;
-        [HideInInspector] public Coroutine corrotina;
-        [HideInInspector] public bool ligada = false;
-    }
-
-    public LuzComSlider[] luzesSliders;
-    public float duracao = 10f;
-
     private ControleMapa controleMapa;
+    public Slider lightBar;
 
-    void Start()
+    public float timer = 5f;
+    private float maxTime;
+
+    public bool isRecharging;
+    bool luzApagada;
+
+    private Light luz;
+
+    private void Start()
     {
         controleMapa = FindAnyObjectByType<ControleMapa>();
-        if (controleMapa == null)
-        {
-            Debug.LogWarning("ControleMapa não encontrado na cena.");
-        }
+        luz = GetComponent<Light>();
+
+        maxTime = timer;
+        lightBar.maxValue = maxTime;
+        lightBar.value = maxTime;
+
+        luz.enabled = false; // começa apagada
     }
 
-    public void AlternarLuz(int indice)
+    private void Update()
     {
-        if (indice < 0 || indice >= luzesSliders.Length) return;
+        EnableTimer();
+    }
 
-        LuzComSlider item = luzesSliders[indice];
+    void EnableTimer()
+    {
+        if (!isRecharging && luz.enabled)
+        {
+            // Gasta energia
+            timer -= Time.deltaTime;
 
-        if (item.ligada)
-        {
-            DesligarLuz(item);
-        }
-        else
-        {
-            // Desliga todas as outras luzes, se alguma estiver ligada
-            foreach (var luzItem in luzesSliders)
+            if (timer <= 0.01f)
             {
-                if (luzItem.ligada)
-                {
-                    DesligarLuz(luzItem);
-                }
+                timer = 0f;
+                isRecharging = true;
+                luz.enabled = false; // só desliga a luz, NÃO o gerador
+                controleMapa.luzLigada = false;
+                luzApagada = true;
             }
-
-            item.luz.enabled = true;
-            item.ligada = true;
-            item.corrotina = StartCoroutine(Temporizador(item));
-
-            if (controleMapa != null)
-                controleMapa.luzLigada = true; // Atualiza o controle do mapa
         }
-    }
-
-    private void DesligarLuz(LuzComSlider item)
-    {
-        if (item.corrotina != null) StopCoroutine(item.corrotina);
-        item.luz.enabled = false;
-        item.slider.value = 0;
-        item.ligada = false;
-        item.corrotina = null;
-
-        if (controleMapa != null)
-            controleMapa.luzLigada = false;
-    }
-
-    IEnumerator Temporizador(LuzComSlider item)
-    {
-        float tempo = duracao;
-        item.slider.maxValue = duracao;
-        item.slider.value = duracao;
-
-        while (tempo > 0)
+        else if (isRecharging && luzApagada)
         {
-            tempo = Mathf.Max(tempo - Time.deltaTime, 0);
-            item.slider.value = tempo;
-            yield return null;
+            // Recarregando
+            timer += Time.deltaTime;
+
+            if (timer >= maxTime)
+            {
+                timer = maxTime;
+                isRecharging = false;
+                luz.enabled = true;
+                luzApagada = false;
+            }
         }
 
-        DesligarLuz(item);
+        lightBar.value = timer;
     }
 }

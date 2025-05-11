@@ -5,37 +5,37 @@ public class AtivarLuz : MonoBehaviour
     // Referência ao controle de mapa externo
     private ControleMapa controleMapa;
 
+    private Lightslider lightSlider;
+
     // Array de luzes com a tag "mainLight"
     public Light[] lights;
 
-    // A luz que esta região controla (deve ser configurado no Inspector)
-    public int indiceDaLuz;
-
     void Start()
     {
+        lightSlider = GetComponent<Lightslider>();
+
         // Encontra o script ControleMapa na cena
         controleMapa = FindAnyObjectByType<ControleMapa>();
     }
 
-    // Alterna o estado de uma luz específica
+    // Alterna o estado de todas as luzes
     public void AlternarLuz()
     {
-        // Verifica se o índice está dentro do limite do array de luzes
-        if (indiceDaLuz >= 0 && indiceDaLuz < lights.Length)
+        foreach (Light luz in lights)
         {
-            Light luz = lights[indiceDaLuz];
+            if (luz != null && !lightSlider.isRecharging)
+            {
+                // Inverte o estado da luz
+                luz.enabled = !luz.enabled;
 
-            // Inverte o estado da luz individualmente
-            luz.enabled = !luz.enabled;
-
-            // Alterna o controle da luz no mapa
-            controleMapa.luzLigada = luz.enabled;
-
-            Debug.Log("Luz " + (luz.enabled ? "ligada." : "desligada.") + " (Índice: " + indiceDaLuz + ")");
-        }
-        else
-        {
-            Debug.LogError("Índice da luz fora do limite do array de luzes.");
+                // Alterna o controle da luz no mapa
+                controleMapa.luzLigada = luz.enabled;
+            }
+            else if (lightSlider.isRecharging)
+            {
+                luz.enabled = false;
+                controleMapa.luzLigada = false;
+            }
         }
     }
 

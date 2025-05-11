@@ -20,6 +20,8 @@ public class IARobo : MonoBehaviour
     public int targetPoint;
     public float speed;
 
+    public bool canAttack;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,9 +33,6 @@ public class IARobo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Rotacao do robo
-        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-
         PatrulhaInimigo();
     }
 

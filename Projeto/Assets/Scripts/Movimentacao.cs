@@ -17,6 +17,10 @@ public class Movimentacao : MonoBehaviour
     // Variavel que controla se o jogador esta agachado ou nao
     private bool estaAgachado;
 
+    private bool temCartao;
+
+    private GameObject card;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +29,7 @@ public class Movimentacao : MonoBehaviour
         // Referenciando a camera principal da cena
         playerCamera = Camera.main.transform;
         anim = GetComponent<Animator>();
+        card = GameObject.Find("Card");
     }
 
     // Update is called once per frame
@@ -76,6 +81,11 @@ public class Movimentacao : MonoBehaviour
             anim.SetBool("estaAgachado", false);
             anim.SetBool("estaAndando", true);
         }
+
+        if (temCartao && Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(card);
+        }
     }
 
     void Agachar()
@@ -98,9 +108,17 @@ public class Movimentacao : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Door") && Input.GetKeyDown(KeyCode.E))
+        if (other.gameObject.CompareTag("Card"))
         {
-            Debug.Log("Entrou na porta");
+            temCartao = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Card"))
+        {
+            temCartao = false;
         }
     }
 }

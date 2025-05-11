@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Gerador
   - mainLight
+  - Card
   layers:
   - Default
   - TransparentFX

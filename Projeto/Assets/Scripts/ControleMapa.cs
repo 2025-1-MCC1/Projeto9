@@ -45,6 +45,7 @@ public class ControleMapa : MonoBehaviour
         {
             Debug.Log("Pressionou E");
             luzLigada = true;
+            
             portaPrincipal.SetActive(false);
             tablet.gameObject.SetActive(true);
         }
