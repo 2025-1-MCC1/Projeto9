@@ -6674,6 +6674,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1349292895}
+    - targetCorrespondingSourceObject: {fileID: 119574, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349292897}
   m_SourcePrefab: {fileID: 100100000, guid: 39b43e271567b4134a12f482c52c8a0f, type: 3}
 --- !u!1 &841117262
 GameObject:
@@ -9636,6 +9639,23 @@ MonoBehaviour:
   lights:
   - {fileID: 1349292893}
   indiceDaLuz: 0
+--- !u!114 &1349292897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349292889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640453e2571026643b9beb34cf7f8ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luzesSliders:
+  - luz: {fileID: 1349292893}
+    slider: {fileID: 122341875}
+    ligada: 0
+  duracao: 10
 --- !u!4 &1373854269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492620, guid: 0f9396310131e47e3979f1a7cb96c071, type: 3}
