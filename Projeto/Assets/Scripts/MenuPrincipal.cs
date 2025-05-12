@@ -1,16 +1,28 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField]private string nomeDoLevelDeJogo;
+    [SerializeField] private GameObject painelMenuInicial;
+    [SerializeField] private GameObject painelOpções;
+    public void Jogar()
     {
-        
+        SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void AbrirOpções()
     {
-        
+        painelMenuInicial.SetActive(false);
+        painelOpções.SetActive(true);
+    }
+    public void FecharOpções()
+    {
+        painelOpções.SetActive(false);
+        painelMenuInicial.SetActive(true);
+    }
+    public void SairJogo()
+    {
+        Debug.Log("Sair do Jogo");
+        Application.Quit();
     }
 }
