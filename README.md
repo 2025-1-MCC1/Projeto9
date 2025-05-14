@@ -12,6 +12,7 @@
 <br><a href="https://github.com/Nathan-bit711">Nathan Santos de Lima</a>
 ### Professores Orientadores: 
 <br><a href="https://www.linkedin.com/in/adriano-valente-534576135/" target="_blank" rel="noopener noreferrer"> Adriano Felix Valente </a>
+<br> <a> Joyce Daniele Tavares </a>
 <br><a href="https://www.linkedin.com/in/remuniz/" target="_blank" rel="noopener noreferrer"> Renata Muniz do Nascimento </a>
 <br> <a href="https://www.linkedin.com/in/victorbarq/" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>.
 
