@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpções;
+
     public void Jogar()
     {
         SceneManager.LoadScene(1);

@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 755269463}
   - component: {fileID: 755269462}
   m_Layer: 0
-  m_Name: MenuManeger
+  m_Name: MenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1135,7 +1135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6406772688d284341ac5ad7f3546c0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeDoLevelDeJogo: Jogo
   painelMenuInicial: {fileID: 274413299}
   "painelOp\xE7\xF5es": {fileID: 411465552}
 --- !u!4 &755269463
