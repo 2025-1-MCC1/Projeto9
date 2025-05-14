@@ -21,6 +21,8 @@ public class ControleMapa : MonoBehaviour
 
     public bool luzLigada;
 
+    public bool geradorLigado;
+
     public GameObject portaPrincipal;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,7 +47,7 @@ public class ControleMapa : MonoBehaviour
         {
             Debug.Log("Pressionou E");
             luzLigada = true;
-            
+            geradorLigado = true;
             portaPrincipal.SetActive(false);
             tablet.gameObject.SetActive(true);
         }

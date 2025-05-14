@@ -12,6 +12,8 @@ public class IARobo : MonoBehaviour
     // Variavel que pega a luz da area do tipo script "AtivarLuz"
     public AtivarLuz luzDaArea;
 
+    private ControleMapa controleMapa;
+
     public Transform targetObj;
     public float speedTarget;
 
@@ -25,6 +27,8 @@ public class IARobo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        controleMapa = FindAnyObjectByType<ControleMapa>();
+
         targetObj = GameObject.FindGameObjectWithTag("Player").transform;
 
         targetPoint = 0;
@@ -33,7 +37,15 @@ public class IARobo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PatrulhaInimigo();
+        if (controleMapa.geradorLigado)
+        {
+            PatrulhaInimigo();
+            gameObject.tag = "Robo";
+        }
+        else
+        {
+            gameObject.tag = "Card";
+        }
     }
 
     void PatrulhaInimigo()

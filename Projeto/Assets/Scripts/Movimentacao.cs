@@ -18,6 +18,7 @@ public class Movimentacao : MonoBehaviour
     private bool estaAgachado;
 
     private bool temCartao;
+    private bool estanoKeycard;
 
     private GameObject card;
 
@@ -86,6 +87,11 @@ public class Movimentacao : MonoBehaviour
         {
             Destroy(card);
         }
+
+        if (temCartao && estanoKeycard && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Proxima fase");
+        }
     }
 
     void Agachar()
@@ -112,6 +118,11 @@ public class Movimentacao : MonoBehaviour
         {
             temCartao = true;
         }
+
+        if (other.gameObject.CompareTag("Keycard"))
+        {
+            estanoKeycard = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -119,6 +130,11 @@ public class Movimentacao : MonoBehaviour
         if (other.gameObject.CompareTag("Card"))
         {
             temCartao = false;
+        }
+
+        if (other.gameObject.CompareTag("Keycard"))
+        {
+            estanoKeycard = false;
         }
     }
 }

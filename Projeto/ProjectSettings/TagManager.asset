@@ -10,6 +10,7 @@ TagManager:
   - Gerador
   - mainLight
   - Card
+  - Keycard
   layers:
   - Default
   - TransparentFX
