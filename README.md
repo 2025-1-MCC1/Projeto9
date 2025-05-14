@@ -27,10 +27,6 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
 |-->Docs<br>
   &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
   &emsp;|-->Backend<br>
@@ -38,6 +34,32 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
 |readme.md<br>
 
 
+## 🛠 Instalação
+
+<b>Android:</b>
+
+Faça o Download do JOGO.apk no seu celular.
+Execute o APK e siga as instruções de seu telefone.
+
+```sh
+Coloque código do prompt de comnando se for necessário
+```
+
+<b>Windows:</b>
+
+Não há instalação! Apenas executável!
+Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+
+```sh
+Coloque código do prompt de comnando se for necessário
+```
+
+<b>HTML:</b>
+
+Não há instalação!
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+
+## 💻 Configuração para Desenvolvimento
 ## 📋 Licença/License
 Inglorious © 2025 by Bruno Rodrigues da Costa, Mariah Alice Pimentel Lôbo Pereira, Murilo Ângelo Pimentel Braggio e Nathan Santos de Lima is licensed under Creative Commons Attribution 4.0 International 
 
