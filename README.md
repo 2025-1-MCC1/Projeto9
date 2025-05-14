@@ -5,7 +5,6 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Inglorious 
 # Integrantes:
 <br><a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa</a>
 <br><a href="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira</a>
@@ -19,9 +18,9 @@
 
 ![Capa do jogo](https://github.com/user-attachments/assets/f7ff1cb1-547b-4055-a805-a6e846960833) 
 
-<a> imagem feita com chatgpt</a>
+<p align="center"><a> Imagem feita com chatgpt</a></p>
 # Descrição do jogo
-No ano de 2055, na china, ocorria uma série de experimentos com mamíferos para a implementação de novas tecnologias.
+No ano de 2055, na China, ocorria uma série de experimentos com mamíferos para a implementação de novas tecnologias.
 Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvolveu uma inteligência acentuada e percebeu que algo estava errado, para salvar os outros que estavam junto dele, para enfrentar esse ambiente nosso personagem será capaz de escapar desse local completamente desconhecido?
 
  
@@ -31,11 +30,11 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
 
 -Raiz<br>
 |<br>
-|-->Docs<br>
+|-->Documentos<br>
   &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
 |-->imagens<br>
-|-->src<br>
+|-->Src<br>
   &emsp;|-->Backend<br>
   &emsp;|-->Frontend<br>
 |readme.md<br>
