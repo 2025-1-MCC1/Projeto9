@@ -19,8 +19,9 @@
 ![Capa do jogo](https://github.com/user-attachments/assets/f7ff1cb1-547b-4055-a805-a6e846960833) 
 
 <p align="center"><a> Imagem feita com chatgpt</a></p>
+
 # Descrição do jogo
-No ano de 2055, na China, ocorria uma série de experimentos com mamíferos para a implementação de novas tecnologias.
+<br>No ano de 2055, na China, ocorria uma série de experimentos com mamíferos para a implementação de novas tecnologias.
 Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvolveu uma inteligência acentuada e percebeu que algo estava errado, para salvar os outros que estavam junto dele, para enfrentar esse ambiente nosso personagem será capaz de escapar desse local completamente desconhecido?
 
  
