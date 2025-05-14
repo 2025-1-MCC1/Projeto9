@@ -9,7 +9,7 @@
 <br><a href= "https://github.com/rodriguesbrun">Bruno Rodrigues da Costa</a>
 <br><a href="https://github.com/alicelobwp">Mariah Alice Pimentel Lôbo Pereira</a>
 <br><a href="https://github.com/Mura173">Murilo Ângelo Pimentel Braggio</a> 
-<br><a href="https://github.com/Nathan-bit711">Nathan Santos de Lima</a>.
+<br><a href="https://github.com/Nathan-bit711">Nathan Santos de Lima</a>
 ### Professores Orientadores: 
 <br><a href="https://www.linkedin.com/in/adriano-valente-534576135/" target="_blank" rel="noopener noreferrer"> Adriano Felix Valente </a>
 <br><a href="https://www.linkedin.com/in/remuniz/" target="_blank" rel="noopener noreferrer"> Renata Muniz do Nascimento </a>
@@ -68,7 +68,7 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 💻 Configuração para Desenvolvimento
 ## 📋 Licença/License
-Inglorious © 2025 by Bruno Rodrigues da Costa, Mariah Alice Pimentel Lôbo Pereira, Murilo Ângelo Pimentel Braggio e Nathan Santos de Lima is licensed under Creative Commons Attribution 4.0 International 
+<a href="https://github.com/2025-1-MCC1/Projeto9/tree/main">Inglorious</a> © 2025 by <a href="https://github.com/2025-1-MCC1/Projeto9/tree/main">FECAP - Fundação Escola de Comércio Álvares Penteado, Bruno Rodrigues da Costa, Mariah Alice Pimentel Lôbo Pereira, Murilo Ângelo Pimentel Braggio e Nathan Santos de Lima</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ## 🎓 Referências
 
