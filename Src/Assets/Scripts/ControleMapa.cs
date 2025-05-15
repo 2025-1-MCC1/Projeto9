@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,8 @@ public class ControleMapa : MonoBehaviour
 
     public GameObject portaPrincipal;
 
+    public TMP_Text[] texts;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +38,11 @@ public class ControleMapa : MonoBehaviour
         // Deixando os objetos não ativos
         map.gameObject.SetActive(false);
         darkBg.gameObject.SetActive(false);
+
+        for (int i = 1; i < texts.Length; i++)
+        {
+            texts[i].gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -50,6 +58,14 @@ public class ControleMapa : MonoBehaviour
             geradorLigado = true;
             portaPrincipal.SetActive(false);
             tablet.gameObject.SetActive(true);
+
+            for (int i = 0; i < 2; i++)
+            {
+                texts[i].gameObject.SetActive(false);
+                texts[i] = null;
+            }
+
+            texts[2].gameObject.SetActive(true);
         }
     }
 
@@ -84,11 +100,15 @@ public class ControleMapa : MonoBehaviour
         {
             tablet.gameObject.SetActive(false);
             comTablet = true;
+            texts[2].gameObject.SetActive(false);
         }
 
         if (other.CompareTag("Gerador"))
         {
             noGerador = true;
+
+            texts[1].gameObject.SetActive(true);
+            texts[0].gameObject.SetActive(false);
         }
     }
 
@@ -97,6 +117,9 @@ public class ControleMapa : MonoBehaviour
         if (other.CompareTag("Gerador"))
         {
             noGerador = false;
+
+            texts[1].gameObject.SetActive(false);
+            texts[0].gameObject.SetActive(true);
         }
     }
 }
