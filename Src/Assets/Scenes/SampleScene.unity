@@ -15407,7 +15407,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.06
+      value: -7.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15415,7 +15415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.94
+      value: -34.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15506,12 +15506,24 @@ PrefabInstance:
       value: "Escrit\xF3rio"
       objectReference: {fileID: 0}
     - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 564.7536
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 382.77222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0.0031
       objectReference: {fileID: 0}
     - target: {fileID: 3774608951414501026, guid: c524857f695e9fb459238b17636f4830, type: 3}
       propertyPath: m_LocalRotation.w
