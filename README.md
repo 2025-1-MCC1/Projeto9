@@ -40,6 +40,12 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
   &emsp; &emsp;|-->Jogos digitais e sistemas interativos<br>
   &emsp; &emsp;|-->Projeto Interdisciplinar Jogos digitais<br>
   &emsp; &emsp;|-->Ética e Pensamento computacional<br>
+  &emsp;|--> Entrega 2 <br>
+  &emsp; &emsp;|-->Algoritmos e Lógica de programação<br>
+  &emsp; &emsp;|-->Cálculo 1<br>
+  &emsp; &emsp;|-->Jogos digitais e sistemas interativos<br>
+  &emsp; &emsp;|-->Projeto Interdisciplinar Jogos digitais<br>
+  &emsp; &emsp;|-->Ética e Pensamento computacional<br>
 |-->Imagens<br>
   &emsp; &emsp;|-->Imagens e Screenshots gerais do jogo<br>
 |-->Src<br>
