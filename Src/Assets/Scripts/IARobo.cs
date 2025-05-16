@@ -44,7 +44,7 @@ public class IARobo : MonoBehaviour
         }
         else
         {
-            gameObject.tag = "Card";
+            gameObject.tag = "Door";
         }
     }
 

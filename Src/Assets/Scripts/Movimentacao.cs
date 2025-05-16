@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,10 +18,14 @@ public class Movimentacao : MonoBehaviour
     // Variavel que controla se o jogador esta agachado ou nao
     private bool estaAgachado;
 
-    private bool temCartao;
+    public bool temCartao;
+
+    public bool estanoCartao;
     private bool estanoKeycard;
 
     private GameObject card;
+
+    public TMP_Text[] texts;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +36,11 @@ public class Movimentacao : MonoBehaviour
         playerCamera = Camera.main.transform;
         anim = GetComponent<Animator>();
         card = GameObject.Find("Card");
+
+        for (int i = 0; i < texts.Length; i++)
+        {
+            texts[i].gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -83,9 +93,12 @@ public class Movimentacao : MonoBehaviour
             anim.SetBool("estaAndando", true);
         }
 
-        if (temCartao && Input.GetKeyDown(KeyCode.F))
+        if (estanoCartao && Input.GetKeyDown(KeyCode.F))
         {
+            temCartao = true;
             Destroy(card);
+            texts[0].gameObject.SetActive(false);
+            texts[1].gameObject.SetActive(true);
         }
 
         if (temCartao && estanoKeycard && Input.GetKeyDown(KeyCode.F))
@@ -116,12 +129,15 @@ public class Movimentacao : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Card"))
         {
-            temCartao = true;
+            estanoCartao = true;
+            texts[0].gameObject.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("Keycard"))
         {
             estanoKeycard = true;
+            texts[1].gameObject.SetActive(false);
+            texts[2].gameObject.SetActive(true);
         }
     }
 
@@ -129,12 +145,15 @@ public class Movimentacao : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Card"))
         {
-            temCartao = false;
+            estanoCartao = false;
+            texts[0].gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Keycard"))
         {
             estanoKeycard = false;
+            texts[1].gameObject.SetActive(true);
+            texts[2].gameObject.SetActive(false);
         }
     }
 }

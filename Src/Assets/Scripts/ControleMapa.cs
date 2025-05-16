@@ -27,6 +27,9 @@ public class ControleMapa : MonoBehaviour
     public GameObject portaPrincipal;
 
     public TMP_Text[] texts;
+    public GameObject tabletUI;
+
+    private Movimentacao movimentacao;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,9 +38,13 @@ public class ControleMapa : MonoBehaviour
         tablet = GameObject.Find("Tablet");
         tablet.gameObject.SetActive(false);
 
+        tabletUI.gameObject.SetActive(false);
+
         // Deixando os objetos não ativos
         map.gameObject.SetActive(false);
         darkBg.gameObject.SetActive(false);
+
+        movimentacao = GetComponent<Movimentacao>();
 
         for (int i = 1; i < texts.Length; i++)
         {
@@ -66,6 +73,11 @@ public class ControleMapa : MonoBehaviour
             }
 
             texts[2].gameObject.SetActive(true);
+        }
+
+        if (movimentacao.temCartao || movimentacao.estanoCartao)
+        {
+            texts[3].gameObject.SetActive(false);
         }
     }
 
@@ -100,7 +112,9 @@ public class ControleMapa : MonoBehaviour
         {
             tablet.gameObject.SetActive(false);
             comTablet = true;
+            tabletUI.gameObject.SetActive(true);
             texts[2].gameObject.SetActive(false);
+            texts[3].gameObject.SetActive(true);
         }
 
         if (other.CompareTag("Gerador"))
