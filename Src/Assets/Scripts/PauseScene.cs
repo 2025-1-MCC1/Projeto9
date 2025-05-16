@@ -5,14 +5,18 @@ public class PauseScene : MonoBehaviour
 {
     public GameObject pauseUI;
     public bool pausarCena;
-    private bool isPaused = false;
+    private bool isPaused;
+
+    private void Start()
+    {
+        pauseUI.SetActive(false);
+    }
 
     void Update()
     {
-        Pausar();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Pressionou ESC");
+            Pausar();
             pausarCena = true;
             pauseUI.SetActive(true);
         }

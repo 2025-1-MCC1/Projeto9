@@ -83,7 +83,6 @@ public class IARobo : MonoBehaviour
             // Se a colisao for do objeto com a tag "Player"
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Robo viu o jogador com a luz acesa");
                 transform.position = Vector3.MoveTowards(this.transform.position, targetObj.position, speedTarget * Time.deltaTime);
             }
         }

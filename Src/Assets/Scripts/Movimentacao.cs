@@ -8,6 +8,7 @@ public class Movimentacao : MonoBehaviour
     private CharacterController controller;
     // Variavel para referenciar a camera
     private Transform playerCamera;
+
     [SerializeField]
     // Variavel para velocidade do objeto
     private float speed;
@@ -25,6 +26,8 @@ public class Movimentacao : MonoBehaviour
 
     private GameObject card;
 
+    private ControleMapa controleMapa;
+
     public TMP_Text[] texts;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +35,9 @@ public class Movimentacao : MonoBehaviour
     {
         // Referenciando a variavel "controller" ao character controller presente no objeto
         controller = GetComponent<CharacterController>();
+
+        controleMapa = GetComponent<ControleMapa>();
+
         // Referenciando a camera principal da cena
         playerCamera = Camera.main.transform;
         anim = GetComponent<Animator>();
@@ -133,7 +139,7 @@ public class Movimentacao : MonoBehaviour
             texts[0].gameObject.SetActive(true);
         }
 
-        if (other.gameObject.CompareTag("Keycard"))
+        if (other.gameObject.CompareTag("Keycard") && controleMapa.geradorLigado)
         {
             estanoKeycard = true;
             texts[1].gameObject.SetActive(false);
@@ -149,7 +155,7 @@ public class Movimentacao : MonoBehaviour
             texts[0].gameObject.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("Keycard"))
+        if (other.gameObject.CompareTag("Keycard") && controleMapa.geradorLigado)
         {
             estanoKeycard = false;
             texts[1].gameObject.SetActive(true);
