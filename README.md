@@ -35,10 +35,20 @@ Nesse jogo acompanharemos a fuga do laboratório de Czar, um macaco que desenvol
 -Raiz<br>
 |-->Documentos<br>
   &emsp;|-->Entrega 1<br>
-|-->imagens<br>
+  &emsp; &emsp;|-->Algoritmos e Lógica de programação<br>
+  &emsp; &emsp;|-->Cálculo 1<br>
+  &emsp; &emsp;|-->Jogos digitais e sistemas interativos<br>
+  &emsp; &emsp;|-->Projeto Interdisciplinar Jogos digitais<br>
+  &emsp; &emsp;|-->Ética e Pensamento computacional<br>
+|-->Imagens<br>
+  &emsp; &emsp;|-->Imagens e Screenshots gerais do jogo<br>
 |-->Src<br>
-|readme.md<br>
-
+  &emsp; &emsp;|-->Assets<br>
+  &emsp; &emsp;|-->Packages<br>
+  &emsp; &emsp;|-->Project Settings<br>
+  &emsp; &emsp;|-->.gitignore<br>
+  &emsp; &emsp;|-->.vsconfig<br>
+|README.md<br>
 
 ## 🛠 Instalação
 
