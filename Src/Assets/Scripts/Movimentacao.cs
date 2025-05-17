@@ -22,13 +22,15 @@ public class Movimentacao : MonoBehaviour
     public bool temCartao;
 
     public bool estanoCartao;
-    private bool estanoKeycard;
+    public bool estanoKeycard;
 
     private GameObject card;
 
     private ControleMapa controleMapa;
 
     public TMP_Text[] texts;
+
+    public Animator[] doorsAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -109,7 +111,10 @@ public class Movimentacao : MonoBehaviour
 
         if (temCartao && estanoKeycard && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Proxima fase");
+            for (int i = 0; i < doorsAnim.Length; i++)
+            {
+                doorsAnim[i].SetBool("Abrindo", true);
+            }
         }
     }
 
