@@ -1,1 +1,2 @@
-
+# Entrega 2 
+[Conectando Derivadas e Limites ao Script ControleMapa (1).pdf](https://github.com/user-attachments/files/20269886/Conectando.Derivadas.e.Limites.ao.Script.ControleMapa.1.pdf)
