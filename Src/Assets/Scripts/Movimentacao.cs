@@ -16,21 +16,32 @@ public class Movimentacao : MonoBehaviour
     // Variavel do animator do personagem
     private Animator anim;
 
-    // Variavel que controla se o jogador esta agachado ou nao
+    // Variavel que controla se o jogador esta agachado
     private bool estaAgachado;
 
+    // Variavel que verifica se o jogador possui o cartao
     public bool temCartao;
 
+    // Variavel que verifica se o jogador esta dentro do campo de colisao para pegar o cartao
     public bool estanoCartao;
+
+    // Variavel que verifica se o jogador esta dentro do campo de colisao para inserir o cartao
     public bool estanoKeycard;
 
+    // Variavel que referencia o objeto do cartao
     private GameObject card;
 
+    // Variavel que referencia o script do script de controle de mapa
     private ControleMapa controleMapa;
 
+    // Variavel que referencia os textos das missoes
     public TMP_Text[] texts;
 
+    // Variavel que referencia as portas
     public Animator[] doorsAnim;
+
+    // Variavel que verifica se a porta foi aberta
+    public bool portaAberta;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,13 +49,19 @@ public class Movimentacao : MonoBehaviour
         // Referenciando a variavel "controller" ao character controller presente no objeto
         controller = GetComponent<CharacterController>();
 
+        // Referenciando a variavel "controleMapa" ao script ControleMapa
         controleMapa = GetComponent<ControleMapa>();
 
         // Referenciando a camera principal da cena
         playerCamera = Camera.main.transform;
+
+        // Referenciando o animator do objeto
         anim = GetComponent<Animator>();
+
+        // Referenciando o objeto do cartao
         card = GameObject.Find("Card");
 
+        // Deixando todos os textos desativados, com excessao do primeiro
         for (int i = 0; i < texts.Length; i++)
         {
             texts[i].gameObject.SetActive(false);
@@ -109,12 +126,17 @@ public class Movimentacao : MonoBehaviour
             texts[1].gameObject.SetActive(true);
         }
 
+        // Verfica que, se o jogador possui o cartao, esta dentro do campo colisor do leitor de cartao e pressionar a tecla F
         if (temCartao && estanoKeycard && Input.GetKeyDown(KeyCode.F))
         {
+            // A animacao das portas abrindo ira ativar
             for (int i = 0; i < doorsAnim.Length; i++)
             {
                 doorsAnim[i].SetBool("Abrindo", true);
             }
+
+            // A variavel "portaAberta" sera verdadeira
+            portaAberta = true;
         }
     }
 
@@ -138,32 +160,48 @@ public class Movimentacao : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Verificando se o jogador esta dentro do campo colisor para pegar o cartao
         if (other.gameObject.CompareTag("Card"))
         {
+            // Variavel "estanoCartao" sera verdadeira
             estanoCartao = true;
+            // Texto com o indice 0 sera ativado
             texts[0].gameObject.SetActive(true);
         }
 
+        // Verificando se o jogador esta dentro do campo colisor do leitor de cartao e se a variavel "geradorLigado"
+        // do script "controleMapa" esta marcada como verdadeira
         if (other.gameObject.CompareTag("Keycard") && controleMapa.geradorLigado)
         {
+            // Variavel "estanoKeycard" sera verdadeira
             estanoKeycard = true;
+            // Texto com o indice 1 sera desativado
             texts[1].gameObject.SetActive(false);
+            // Texto com o indice 2 sera ativado
             texts[2].gameObject.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        // Verificando se o jogador saiu do campo colisor para pegar o cartao
         if (other.gameObject.CompareTag("Card"))
         {
+            // Variavel "estanoCartao" sera falsa
             estanoCartao = false;
+            // Texto com o indice 0 sera desativado
             texts[0].gameObject.SetActive(false);
         }
 
+        // Verificando se o jogador saiu do campo colisor do leitor de cartao e se a variavel "geradorLigado"
+        // do script "controleMapa" esta marcada como verdadeira
         if (other.gameObject.CompareTag("Keycard") && controleMapa.geradorLigado)
         {
+            // Variavel "estanoKeycard" sera falsa
             estanoKeycard = false;
+            // Texto com o indice 1 sera ativado
             texts[1].gameObject.SetActive(true);
+            // Texto com o indice 2 sera desativado
             texts[2].gameObject.SetActive(false);
         }
     }
