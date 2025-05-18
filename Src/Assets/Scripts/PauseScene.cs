@@ -61,13 +61,12 @@ public class PauseScene : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Função para sair da cena atual e ir para a cena 2
+    // Função para sair da cena atual e ir para o menu
     public void Sair()
     {
         // Retoma o tempo normal do jogo
         Time.timeScale = 1f;
-        // Vai para a cena 2
-        SceneManager.LoadScene(2);
+        // Vai para o menu
+        SceneManager.LoadScene(1);
     }
 }
-
